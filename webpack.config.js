@@ -26,8 +26,8 @@ module.exports = {
 
   module: {
     loaders: [
-      {test: /\.scss$/, loader: 'style!css!sass'},
-      {test: /\.woff$/, loader: 'url?limit=1000'}
+      {test: /\.scss$/, loader: 'style!css!sass!autoprefixer-loader'},
+      {test: /\.woff|svg$/, loader: 'url?limit=1000'}
     ]
   },
   plugins: [
