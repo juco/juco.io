@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Century Schoolbook Monospace";
+  src: url("/font/Century-Schoolbook-Monospace-BT.svg") format("svg");
+  src: url("/font/Century-Schoolbook-Monospace-BT.woff") format("woff");
+}
+
+:root {
+  --color-black: #272822;
+  --color-white: #FFF;
+  --color-primary: #A6E22E;
+  --color-secondary: #F92672;
+  --color-tertiary: #E6D874;
+
+  --font-size-base: 5vh;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--color-black);
+  font-family: 'Century Schoolbook Monospace', monospace;
+  margin: 0;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  .header {
+    font-size: 0;
+  }
+
+  .code {
+    font-size: var(--font-size-base);
+    &.class {
+      color: var(--color-primary);
+    }
+    &.punctuation {
+      color: var(--color-white);
+    }
+    &.method {
+      color: var(--color-secondary);
+    }
+    &.parens {
+      color: var(--color-tertiary);
+    }
+  }
+}
+
